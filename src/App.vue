@@ -1,11 +1,20 @@
 <script setup>
-    import { ref } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
+    import { ref, onMounted } from 'vue'
 
     const message = ref("Hello GitHub Workshop!")
+    const count = ref(0)
+
+    function increment() {
+      count.value++
+    }
+    onMounted(() => {
+      console.log(`The initial count is ${count.value}.`)
+    })
 </script>
 
 <template>
      <h1>{{ message }}</h1>
+  <Message severity="success">{{ count }}</Message>
 </template>
 
 

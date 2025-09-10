@@ -13,11 +13,12 @@
 <div id="app"></div>
 
 <script type="module" import="./src/main.js">
-  import { createApp, ref } from 'vue'
-  import MyComponent from './src/main.js'
-  import PrimeVue from 'primevue/config'
-  import Button from 'primevue/button'
+  import { createApp, ref } from 'vue';
+  import MyComponent from './src/main.js';
+  import PrimeVue from 'primevue/config';
+  import Button from 'primevue/button';
   import Aura from "@primeuix/themes/aura";
+  import Message from "primevue/message";
 
   const app = createApp(MyComponent).use(PrimeVue, {
     theme: {
@@ -25,6 +26,7 @@
     },
   });
   app.component('Button', Button);
+  app.component('Message', Message);
   app.mount('#app');
 </script>
 </body>
