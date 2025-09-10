@@ -13,10 +13,19 @@
 <div id="app"></div>
 
 <script type="module" import="./src/main.js">
-  import { createApp, ref } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
+  import { createApp, ref } from 'vue'
   import MyComponent from './src/main.js'
+  import PrimeVue from 'primevue/config'
+  import Button from 'primevue/button'
+  import Aura from "@primeuix/themes/aura";
 
-  createApp(MyComponent).mount('#app')
+  const app = createApp(MyComponent).use(PrimeVue, {
+    theme: {
+      preset: Aura,
+    },
+  });
+  app.component('Button', Button);
+  app.mount('#app');
 </script>
 </body>
 

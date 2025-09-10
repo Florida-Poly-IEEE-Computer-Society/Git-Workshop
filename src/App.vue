@@ -1,11 +1,13 @@
 <script setup>
     import { ref } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
+
     const message = ref("Hello GitHub Workshop!")
 </script>
 
 <template>
-  <h1>{{ message }}</h1>
+     <h1>{{ message }}</h1>
 </template>
+
 
 <style>
 /* Global styles */
@@ -16,7 +18,6 @@
   text-transform: capitalize;
 }
 .btn__danger {
-  color: white;
   background-color: #ca3c3c;
   border-color: #bd2130;
 }
@@ -27,7 +28,6 @@
   outline-color: #c82333;
 }
 .btn__primary {
-  color: white;
   background-color: black;
 }
 .btn-group {
@@ -87,7 +87,6 @@
 }
 /* End global styles */
 #app {
-  background: white;
   margin: 2rem 0 4rem 0;
   padding: 1rem;
   padding-top: 0;
@@ -116,5 +115,14 @@
   text-align: center;
   margin: 0;
   margin-bottom: 1rem;
+}
+button {
+    background-color: #04AA6D; /* Green */
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
 }
 </style>
