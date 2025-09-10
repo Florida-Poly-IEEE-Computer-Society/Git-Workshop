@@ -1,11 +1,15 @@
 <script setup>
-    import { ref } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
+    import { ref } from 'vue'
 
     const message = ref("Hello GitHub Workshop!")
+    const count = ref(0)
 </script>
 
 <template>
      <h1>{{ message }}</h1>
+    <div class="card flex justify-center">
+        <Button label="Add" size="large" @click="count++"/>
+    </div>
 </template>
 
 
