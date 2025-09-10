@@ -15,6 +15,9 @@
 <template>
      <h1>{{ message }}</h1>
   <Message severity="success">{{ count }}</Message>
+    <div class="card flex justify-center">
+        <Button label="Add" size="large" @click="count++"/>
+    </div>
 </template>
 
 
